@@ -1,0 +1,1885 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title data-ar="ملف أعمال مهندس صيانة أجهزة الحاسوب والشبكات | يوسف الشريف" data-en="Computer & Network Maintenance Engineer Portfolio | Yousef Alsherief">ملف أعمال مهندس صيانة أجهزة الحاسوب والشبكات | يوسف الشريف</title>
+<meta name="description" content="مهندس صيانة أجهزة الحاسوب والشبكات: صيانة متقدمة، إدارة شبكات، أمن سيبراني، استعادة بيانات، تحسين أداء، دعم تقني احترافي." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root {
+  --bg:#050e1d;
+  --bg-alt:#0d1d32;
+  --panel:rgba(15,32,55,.72);
+  --panel-solid:#132840;
+  --grid-color:#142b46;
+  --txt:#d8e4fb;
+  --txt-dim:#8fa2c2;
+  --accent:#64ffda;
+  --accent-alt:#41dcb9;
+  --danger:#ff4d61;
+  --radius:22px;
+  --transition:.4s cubic-bezier(.4,.2,.2,1);
+  --shadow:0 10px 40px -10px rgba(0,0,0,.55);
+  /* نمط الدارات (SVG مكرر) */
+  --circuit-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Cg stroke='%2364ffda22' stroke-width='2' fill='none' stroke-linecap='round'%3E%3Cpath d='M10 10h50v50M60 60h40v40M100 100h30v30M130 130h50'/%3E%3Cpath d='M10 120h60v-40M70 80h50v-50M120 30h40M90 150h70v40M160 190h30'/%3E%3Cpath d='M20 200h40v-60M60 140h30'/%3E%3C/g%3E%3Cg fill='%2364ffda33'%3E%3Ccircle cx='10' cy='10' r='3'/%3E%3Ccircle cx='60' cy='60' r='3'/%3E%3Ccircle cx='100' cy='100' r='3'/%3E%3Ccircle cx='130' cy='130' r='3'/%3E%3Ccircle cx='10' cy='120' r='3'/%3E%3Ccircle cx='70' cy='80' r='3'/%3E%3Ccircle cx='120' cy='30' r='3'/%3E%3Ccircle cx='90' cy='150' r='3'/%3E%3Ccircle cx='160' cy='190' r='3'/%3E%3Ccircle cx='20' cy='200' r='3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Skill bar value classes */
+.skill.value-92 { --value:92%; }
+.skill.value-90 { --value:90%; }
+.skill.value-86 { --value:86%; }
+.skill.value-88 { --value:88%; }
+.skill.value-84 { --value:84%; }
+
+* { box-sizing:border-box; }
+body {
+  font-family:'Cairo',sans-serif;
+  background: radial-gradient(circle at 20% 25%, #11263d 0%, #061120 70%);
+  position: relative;
+  overflow-x: hidden;
+  color:var(--txt);
+  -webkit-font-smoothing:antialiased;
+  scroll-behavior:smooth;
+
+  /* إضافة خصائص الفلكس مع الحفاظ على الباقي */
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+}
+/* طبقة نمط الدارات */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: var(--circuit-pattern);
+  background-size: 520px 520px;
+  background-repeat: repeat;
+  opacity: .28;
+  mix-blend-mode: screen;
+  animation: floatPattern 26s linear infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* تظليل خفيف محيطي (اختياري) */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 70% 30%, rgba(20,70,80,.12), transparent 60%),
+    radial-gradient(circle at 20% 75%, rgba(100,255,218,.08), transparent 65%),
+    linear-gradient(180deg, rgba(0,0,0,.35), transparent 35%, rgba(0,0,0,.55));
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* حركة خفيفة للنمط لإحساس بالحياة */
+@keyframes floatPattern {
+  0% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(34px) scale(1.03); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+/* وضع إضاءة (اختياري لمن يفضل سطوع أعلى) */
+@media (prefers-color-scheme: light) {
+  body {
+    background: radial-gradient(circle at 20% 25%, #1b405a 0%, #061120 80%);
+  }
+  body::before { opacity: .22; mix-blend-mode: lighten; }
+}
+
+h1,h2,h3,h4 { font-weight:800; letter-spacing:.5px; }
+a { transition:color .3s; }
+
+.glass {
+  background:var(--panel);
+  -webkit-backdrop-filter:blur(14px) saturate(145%);
+  backdrop-filter:blur(14px) saturate(145%);
+  border:1px solid rgba(100,255,218,.12);
+  border-radius:var(--radius);
+  position:relative;
+  overflow:hidden;
+}
+.glass::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg,rgba(100,255,218,.09),transparent 60%);
+  opacity:.7;
+  pointer-events:none;
+}
+.glass:hover { border-color:rgba(100,255,218,.35); box-shadow:0 0 0 1px rgba(100,255,218,.15),0 8px 28px -6px rgba(0,0,0,.55); }
+
+.btn {
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  gap:.65rem;
+  font-weight:700;
+  padding:.95rem 1.65rem;
+  border:2px solid var(--accent);
+  color:var(--accent);
+  border-radius:14px;
+  transition:var(--transition);
+  overflow:hidden;
+}
+.btn:hover {
+  color:#061120;
+  background:var(--accent);
+  transform:translateY(-3px);
+  box-shadow:0 6px 18px -4px rgba(100,255,218,.5);
+}
+.btn.secondary {
+  background:var(--accent);
+  color:#061120;
+}
+.btn.secondary:hover {
+  background:var(--accent-alt);
+  border-color:var(--accent-alt);
+  color:#04101d;
+}
+.section-head {
+  text-align:center;
+  margin-bottom:3.5rem;
+}
+.section-head h2 {
+  font-size:clamp(1.9rem,3.5vw,2.8rem);
+  background:linear-gradient(90deg,var(--accent),#c8fff1);
+-webkit-background-clip:text;
+background-clip:text;
+  color:transparent;
+  position:relative;
+}
+.section-head h2::after {
+  content:"";
+  display:block;
+  width:95px;
+  height:4px;
+  margin:.9rem auto 0;
+  border-radius:3px;
+  background:linear-gradient(90deg,var(--accent),transparent);
+}
+.fade { opacity:0; transform:translateY(38px); transition:1s cubic-bezier(.25,.6,.2,1); }
+.fade.in { opacity:1; transform:none; }
+
+/* HERO */
+.hero {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:3.5rem;
+  align-items:center;
+  padding:clamp(3rem,6vw,6rem) 1rem 4rem;
+  max-width:1250px;
+  margin:0 auto;
+}
+.tagline {
+  font-size:clamp(.8rem,1.1rem,.95rem);
+  letter-spacing:2.5px;
+  font-weight:600;
+  color:var(--accent);
+  text-transform:uppercase;
+  margin-bottom:1rem;
+}
+.hero h1 {
+  font-size:clamp(2.4rem,5.5vw,4.4rem);
+  line-height:1.08;
+  margin-bottom:1.2rem;
+}
+.hero .lead {
+  font-size:clamp(1.05rem,1.3vw,1.25rem);
+  color:var(--txt-dim);
+  line-height:1.8;
+  max-width:640px;
+  margin-bottom:2.2rem;
+}
+
+/* Portrait Frame */
+.portrait-wrapper {
+  justify-self:center;
+  position:relative;
+  width:320px;
+  max-width:90vw;
+}
+.portrait-frame {
+  position:relative;
+  width:100%;
+  aspect-ratio:1/1;
+  border-radius:34px;
+  padding:10px;
+  background:
+    linear-gradient(160deg,#64ffda33,transparent 70%),
+    linear-gradient(340deg,#64ffda55,transparent 65%),
+    linear-gradient(90deg,#102636,#0b1b30);
+  box-shadow:0 0 0 1px rgba(100,255,218,.25),0 18px 55px -18px rgba(0,0,0,.85);
+  overflow:hidden;
+  isolation:isolate;
+  -webkit-backdrop-filter:blur(6px) saturate(140%);
+  backdrop-filter:blur(6px) saturate(140%);
+}
+.portrait-frame::before,
+.portrait-frame::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:30px;
+  pointer-events:none;
+}
+.portrait-frame::before {
+  background:
+    radial-gradient(circle at 0 0,rgba(100,255,218,.35),transparent 55%),
+    radial-gradient(circle at 100% 100%,rgba(100,255,218,.25),transparent 60%),
+    linear-gradient(120deg,rgba(255,255,255,.05),transparent 70%);
+  mix-blend-mode:screen;
+  opacity:.9;
+}
+.portrait-frame::after {
+  border:2px solid rgba(100,255,218,.55);
+/* mask property moved below -webkit-mask */
+  -webkit-mask:linear-gradient(#000,#000) content-box,linear-gradient(#000,#000);
+  mask:linear-gradient(#000,#000) content-box,linear-gradient(#000,#000);
+  -webkit-mask-composite:destination-out;
+  mask-composite:exclude;
+  padding:14px;
+  border-radius:34px;
+  opacity:.85;
+}
+.portrait-img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:22px;
+  position:relative;
+  z-index:2;
+  filter:saturate(115%) contrast(108%);
+  transition:var(--transition);
+}
+.portrait-frame:hover .portrait-img { transform:scale(1.04); }
+
+/* Services */
+.services-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:1.5rem;
+}
+.service {
+  position:relative;
+  padding:1.4rem 1.2rem 1.5rem;
+  display:flex;
+  flex-direction:column;
+  gap:.8rem;
+  border:1px solid rgba(100,255,218,.12);
+  border-radius:20px;
+  background:linear-gradient(145deg,#14283e,#0d1d32);
+  overflow:hidden;
+  isolation:isolate;
+  min-height:190px;
+  transition:var(--transition);
+}
+.service::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at 80% 10%,rgba(100,255,218,.22),transparent 60%);
+  opacity:0;
+  transition:.8s;
+}
+.service:hover { transform:translateY(-6px); border-color:rgba(100,255,218,.4); }
+.service:hover::before { opacity:1; }
+.service i {
+  font-size:1.9rem;
+  color:var(--accent);
+  text-shadow:0 0 18px rgba(100,255,218,.4);
+}
+
+/* تحسين مظهر المهارات */
+.skill-bars { display:grid; gap:1rem; }
+.skill {
+  /* خلفية مسار أوضح */
+  background:linear-gradient(135deg,#0b2536,#0e2e45 60%);
+  border:1px solid #1d4d61;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.02);
+  overflow:hidden;
+}
+.skill .bar {
+  background:
+    linear-gradient(90deg,
+      rgba(100,255,218,.15) 0%,
+      rgba(100,255,218,.25) 8%,
+      var(--accent) 8%,
+      #32d9b7 55%,
+      #13b698 100%);
+  box-shadow:0 0 0 1px rgba(100,255,218,.55),
+             0 0 14px -2px rgba(100,255,218,.55),
+             0 4px 18px -6px rgba(0,0,0,.6);
+  opacity:1;
+  border-radius:inherit;
+  mask:linear-gradient(#000,#000);
+  transition:width 1.9s cubic-bezier(.65,.05,.36,1);
+  will-change:width;
+}
+/* width for .skill.visible .bar is set via --value, no extra rule needed */
+
+.skill .bar::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.35),transparent 60%),
+    repeating-linear-gradient(135deg,rgba(255,255,255,.15) 0 8px,transparent 8px 16px);
+  mix-blend-mode:overlay;
+  opacity:.35;
+  pointer-events:none;
+}
+
+.skill .info{
+  position:relative;
+  z-index:2;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:.75rem;
+  font-size:.9rem;
+  font-weight:600;
+  letter-spacing:.3px;
+  color:var(--txt);
+}
+
+.skill .label{
+  /* إزالة عرض سابق */
+  position:relative;
+}
+
+.skill .percent{
+  font-weight:800;
+  color:var(--accent);
+  text-shadow:0 0 6px rgba(100,255,218,.55);
+  font-size:.85rem;
+  min-width:3.2rem;
+  text-align:center;
+  background:rgba(10,40,55,.55);
+  border:1px solid rgba(100,255,218,.35);
+  padding:.25rem .55rem;
+  border-radius:999px;
+  -webkit-backdrop-filter:blur(4px);
+  -webkit-backdrop-filter:blur(4px);
+  -webkit-backdrop-filter:blur(4px);
+  -webkit-backdrop-filter:blur(4px);
+  -webkit-backdrop-filter:blur(4px);
+  backdrop-filter:blur(4px);
+}
+
+@media (max-width:640px){
+  .skill .info{ flex-wrap:wrap; }
+  .skill .percent{ order:-1; }
+}
+
+/* Timeline */
+.timeline {
+  border-right:2px dashed #1f4061;
+  padding-right:1.4rem;
+  position:relative;
+}
+.timeline::before {
+  content:"";
+  position:absolute;
+  right:-10px;
+  top:0;
+  bottom:0;
+  width:4px;
+  background:linear-gradient(var(--accent),transparent);
+  border-radius:4px;
+  opacity:.25;
+}
+.event {
+  position:relative;
+  padding:1rem 1rem 1rem 0;
+  margin-bottom:1.6rem;
+}
+.event:last-child { margin-bottom:.3rem; }
+.event::before {
+  content:"";
+  position:absolute;
+  top:1.15rem;
+  right:-1.55rem;
+  width:15px;
+  height:15px;
+  background:var(--accent);
+  border:4px solid var(--bg);
+  border-radius:50%;
+  box-shadow:0 0 0 4px rgba(100,255,218,.2);
+}
+.event h4 { font-weight:700; font-size:1.05rem; }
+.event p.meta { font-size:.78rem; letter-spacing:.5px; text-transform:uppercase; color:var(--accent); font-weight:600; margin:.35rem 0 .6rem; }
+
+/* Projects */
+.projects-grid {
+  display:grid;
+  gap:2rem;
+  grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
+}
+.project {
+  position:relative;
+  border-radius:20px;
+  overflow:hidden;
+  background:#0f2236;
+  border:1px solid rgba(100,255,218,.15);
+  transition:var(--transition);
+  display:flex;
+  flex-direction:column;
+}
+.project:hover { transform:translateY(-6px); border-color:var(--accent); box-shadow:0 18px 40px -15px rgba(0,0,0,.6); }
+.project figure { position:relative; aspect-ratio:16/10; overflow:hidden; }
+.project img { width:100%; height:100%; object-fit:cover; filter:brightness(.9) saturate(110%); transition:1.3s ease; }
+.project:hover img { transform:scale(1.07); filter:brightness(1) saturate(120%); }
+.project .content { padding:1.2rem 1.15rem 1.5rem; display:flex; flex-direction:column; gap:.7rem; flex:1; }
+.badges { display:flex; flex-wrap:wrap; gap:.4rem; margin-top:auto; }
+.badges span {
+  background:#16344c;
+  color:var(--accent);
+  font-size:.65rem;
+  font-weight:600;
+  letter-spacing:.5px;
+  padding:.35rem .55rem .3rem;
+  border:1px solid rgba(100,255,218,.35);
+  border-radius:30px;
+}
+
+/* Contact */
+.contact-cta {
+  max-width:760px;
+  margin:0 auto;
+  text-align:center;
+}
+.socials { display:flex; gap:1.1rem; justify-content:center; margin-top:1.4rem; flex-wrap:wrap; }
+.socials a {
+  width:50px; height:50px; display:grid; place-items:center;
+  border:1px solid rgba(100,255,218,.25);
+  border-radius:16px;
+  color:var(--accent);
+  background:#0f2439;
+  font-size:1.25rem;
+  position:relative;
+  overflow:hidden;
+  transition:var(--transition);
+}
+.socials a::before {
+  content:"";
+  position:absolute; inset:0;
+  background:linear-gradient(140deg,rgba(100,255,218,.3),transparent 60%);
+  opacity:0; transition:var(--transition);
+}
+.socials a:hover { transform:translateY(-6px) scale(1.06); box-shadow:0 8px 28px -8px rgba(100,255,218,.4); }
+.socials a:hover::before { opacity:1; }
+
+/* Header */
+header {
+  position:sticky; top:0; z-index:60;
+  -webkit-backdrop-filter:blur(22px) saturate(180%);
+  backdrop-filter:blur(22px) saturate(180%);
+  background:rgba(5,15,29,.68);
+  border-bottom:1px solid rgba(100,255,218,.15);
+}
+.navbar {
+  max-width:1300px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:.9rem clamp(.9rem,2.4vw,2.2rem);
+  gap:2rem;
+}
+.brand {
+  font-size:1.45rem;
+  font-weight:800;
+  background:linear-gradient(90deg,var(--accent),#d5fff6);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  letter-spacing:.5px;
+  display:flex; align-items:center; gap:.55rem;
+}
+nav ul {
+  display:flex;
+  gap:1.8rem;
+  font-weight:600;
+  font-size:.95rem;
+}
+nav a {
+  position:relative;
+  padding:.3rem .2rem;
+  color:var(--txt-dim);
+}
+nav a.active,
+nav a:hover { color:var(--accent); }
+nav a.active::after,
+nav a:hover::after {
+  content:"";
+  position:absolute;
+  right:0; left:0; bottom:-6px;
+  height:3px;
+  background:linear-gradient(90deg,var(--accent),transparent);
+  border-radius:4px;
+}
+
+/* Lang switcher */
+.lang-switch {
+  display:inline-flex;
+  border:1px solid rgba(100,255,218,.3);
+  overflow:hidden;
+  border-radius:12px;
+}
+.lang-switch button {
+  padding:.5rem .9rem;
+  font-size:.7rem;
+  font-weight:700;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  background:transparent;
+  color:var(--txt-dim);
+  transition:var(--transition);
+}
+.lang-switch button.active {
+  background:var(--accent);
+  color:#04121d;
+}
+
+/* Footer */
+footer {
+  margin-top:5rem;
+  padding:2.2rem 1rem;
+  text-align:center;
+  font-size:.85rem;
+  color:var(--txt-dim);
+  background:
+    radial-gradient(circle at 50% 0, rgba(100,255,218,.05), transparent 60%),
+    linear-gradient(180deg, rgba(8,30,45,.85), #040c15 80%);
+  border-top:1px solid rgba(100,255,218,.15);
+}
+
+/* Utilities */
+.wrapper { max-width:1250px; margin:0 auto; padding:0 1.2rem; }
+.grid-2 { display:grid; gap:3rem; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); }
+.mt-section { margin-top:5.5rem; }
+
+/* Responsive */
+@media (max-width:900px){
+  .hero { padding-top:4.5rem; }
+  nav ul { display:none; }
+  .mobile-nav-toggle { display:inline-flex; }
+}
+.mobile-nav-toggle {
+  display:none;
+  width:44px; height:44px;
+  border:1px solid rgba(100,255,218,.35);
+  border-radius:14px;
+  align-items:center;
+  justify-content:center;
+  font-size:1.25rem;
+  color:var(--accent);
+  background:#0e2237;
+  transition:var(--transition);
+}
+.mobile-nav-toggle:hover { background:#13314a; }
+
+/* Mobile menu */
+#mobileMenu {
+  position:fixed;
+  inset:0 0 auto 0;
+  background:rgba(5,15,29,.95);
+  -webkit-backdrop-filter:blur(20px);
+  backdrop-filter:blur(20px);
+  padding:5.5rem 2rem 3rem;
+  display:none;
+  flex-direction:column;
+  gap:1.6rem;
+  z-index:100;
+}
+#mobileMenu a {
+  font-size:1.05rem;
+  font-weight:700;
+  color:var(--txt);
+  padding:.85rem 1rem;
+  border:1px solid rgba(100,255,218,.18);
+  border-radius:16px;
+  background:#0f2439;
+}
+#mobileMenu a:hover { background:#16344c; color:var(--accent); }
+
+/* Scrollbar */
+::-webkit-scrollbar { width:10px; }
+::-webkit-scrollbar-track { background:#071321; }
+::-webkit-scrollbar-thumb { background:#16344c; border-radius:6px; }
+::-webkit-scrollbar-thumb:hover { background:#1e4561; }
+
+/* ===== Advanced Proficiency Bars (new) ===== */
+.skills-pro {
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
+  margin-top:.75rem;
+}
+.skill-adv {
+  position:relative;
+  padding:0.85rem 0.95rem 1.15rem;
+  border:1px solid rgba(100,255,218,.22);
+  border-radius:16px;
+  background:
+    linear-gradient(145deg,#0a2234 0%,#0d2e45 55%,#0b1f34 100%);
+  overflow:hidden;
+  isolation:isolate;
+}
+.skill-adv::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 85% 20%,rgba(100,255,218,.18),transparent 70%),
+    linear-gradient(0deg,rgba(255,255,255,.06),transparent 55%);
+  opacity:.55;
+  mix-blend-mode:overlay;
+  pointer-events:none;
+}
+.skill-adv .header {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:.75rem;
+  margin-bottom:.55rem;
+  position:relative;
+  z-index:2;
+  font-size:.95rem;
+  font-weight:600;
+  letter-spacing:.3px;
+  color:var(--txt);
+}
+.skill-adv .header .title { flex:1; }
+.skill-adv .track {
+  position:relative;
+  height:14px;
+  border-radius:999px;
+  background:
+    linear-gradient(90deg,#103245,#103245) padding-box,
+    linear-gradient(90deg,#1b4355,#143544) border-box;
+  border:1px solid rgba(100,255,218,.28);
+  overflow:hidden;
+}
+.skill-adv .track::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    repeating-linear-gradient(90deg,
+      rgba(255,255,255,.05) 0 22px,
+      rgba(255,255,255,0) 22px 44px);
+  mix-blend-mode:overlay;
+  opacity:.35;
+  pointer-events:none;
+}
+.skill-adv .fill {
+  position:absolute;
+  inset:0;
+  width:0;
+  background:
+    linear-gradient(90deg,#1dd3b6 0%,#17c3aa 35%,#11b099 65%,#0fa287 100%);
+  box-shadow:0 0 0 1px rgba(100,255,218,.55),
+             0 0 12px -2px rgba(100,255,218,.7),
+             0 4px 14px -4px rgba(0,0,0,.65);
+  border-radius:inherit;
+  overflow:visible;
+  transition:width 1.8s cubic-bezier(.65,.05,.36,1);
+}
+.skill-adv .fill::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.38),rgba(255,255,255,0) 60%),
+    repeating-linear-gradient(-45deg,rgba(255,255,255,.22) 0 8px,transparent 8px 16px);
+  mix-blend-mode:overlay;
+  opacity:.35;
+  pointer-events:none;
+}
+.skill-adv .dot {
+  position:absolute;
+  top:50%;
+  translate:0 -50%;
+  width:22px;
+  height:22px;
+  border-radius:50%;
+  background:radial-gradient(circle at 35% 35%,#ffffff 0 20%,#64ffda 40% 65%,#119b85 70%);
+  box-shadow:0 0 0 3px #0f2938,0 0 12px -2px rgba(100,255,218,.9);
+  border:2px solid #0f2c3b;
+  transform:translateX(0);
+  opacity:0;
+  transition:transform 1.8s cubic-bezier(.65,.05,.36,1), opacity .4s;
+  z-index:3;
+}
+html[dir="rtl"] .skill-adv .dot { right:0; }
+html[dir="ltr"] .skill-adv .dot { left:0; }
+
+.skill-adv .badge {
+  position:absolute;
+  top:-34px;
+  translate:-50% 0;
+  padding:.25rem .6rem .3rem;
+  background:rgba(8,44,56,.85);
+  border:1px solid rgba(100,255,218,.55);
+  color:var(--accent);
+  font-size:.7rem;
+  font-weight:800;
+  border-radius:8px;
+  box-shadow:0 4px 14px -6px rgba(0,0,0,.8),0 0 0 1px rgba(100,255,218,.25);
+-webkit-backdrop-filter:blur(4px);
+backdrop-filter:blur(4px);
+  opacity:0;
+  transition:opacity .6s .4s;
+  pointer-events:none;
+  white-space:nowrap;
+  z-index:4;
+}
+html[dir="rtl"] .skill-adv .badge { right:0; }
+html[dir="ltr"] .skill-adv .badge { left:0; }
+
+.skill-adv.loaded .badge { opacity:1; }
+.skill-adv.loaded .dot { opacity:1; }
+
+.skill-adv .tooltip {
+  position:absolute;
+  inset:auto auto 6px 0;
+  right:0;
+  background:#092432;
+  color:var(--txt-dim);
+  padding:.55rem .75rem;
+  font-size:.7rem;
+  line-height:1.4;
+  border:1px solid rgba(100,255,218,.25);
+  border-radius:10px;
+  width:max(240px,40%);
+  box-shadow:0 8px 25px -10px rgba(0,0,0,.6);
+  opacity:0;
+  transform:translateY(6px);
+  transition:.5s;
+  pointer-events:none;
+  z-index:10;
+}
+.skill-adv:hover .tooltip { opacity:1; transform:translateY(0); }
+@media (max-width:700px){
+  .skill-adv .tooltip { display:none; }
+  .skill-adv { padding:.8rem .85rem 1rem; }
+  .skill-adv .badge { top:-30px; }
+}
+
+/* Contact Form Enhancements */
+.contact-form-wrapper{
+  margin-top:2.2rem;
+  text-align:initial;
+}
+.form-grid{
+  display:grid;
+  gap:1.15rem;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+}
+.field{
+  display:flex;
+  flex-direction:column;
+  gap:.45rem;
+  position:relative;
+}
+.field label{
+  font-size:.8rem;
+  font-weight:700;
+  letter-spacing:.5px;
+  color:var(--accent);
+  display:flex;
+  align-items:center;
+  gap:.4rem;
+  text-transform:uppercase;
+}
+.required-badge{
+  font-size:.55rem;
+  background:var(--accent);
+  color:#042427;
+  padding:.15rem .4rem .2rem;
+  border-radius:4px;
+  font-weight:800;
+  letter-spacing:.5px;
+}
+.field input,
+.field select,
+.field textarea{
+  background:#0d2535;
+  border:1px solid #1d4152;
+  border-radius:12px;
+  padding:.8rem .9rem;
+  font-family:inherit;
+  font-size:.85rem;
+  color:var(--txt);
+  outline:none;
+  transition:.35s;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.02);
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+  border-color:var(--accent);
+  box-shadow:0 0 0 1px var(--accent),0 0 0 4px rgba(100,255,218,.15);
+}
+.field select{
+  cursor:pointer;
+  appearance:none;
+  background-image:linear-gradient(45deg,transparent 49%,var(--accent) 50%,var(--accent) 51%,transparent 52%),linear-gradient(135deg,transparent 49%,var(--accent) 50%,var(--accent) 51%,transparent 52%);
+  background-position:calc(100% - 18px) 54%, calc(100% - 12px) 54%;
+  background-size:6px 6px,6px 6px;
+  background-repeat:no-repeat;
+}
+.field textarea{ min-height:140px; resize:vertical; line-height:1.6; }
+.inline-2{ grid-column:1 / -1; display:grid; gap:1.15rem; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); }
+.form-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.85rem;
+  margin-top:.6rem;
+  align-items:center;
+}
+.btn-pill{
+  background:var(--accent);
+  color:#042427;
+  border:2px solid var(--accent);
+  font-weight:800;
+  padding:.85rem 1.65rem;
+  border-radius:14px;
+  font-size:.85rem;
+  letter-spacing:.6px;
+  display:inline-flex;
+  gap:.55rem;
+  align-items:center;
+  cursor:pointer;
+  transition:.35s;
+}
+.btn-pill.secondary{
+  background:transparent;
+  color:var(--accent);
+}
+.btn-pill:hover{
+  transform:translateY(-3px);
+  background:var(--accent-alt);
+  border-color:var(--accent-alt);
+}
+.btn-pill.secondary:hover{
+  background:rgba(100,255,218,.08);
+}
+#formStatus{
+  margin-top:1rem;
+  font-size:.8rem;
+  font-weight:600;
+  letter-spacing:.4px;
+  line-height:1.5;
+  display:flex;
+  gap:.65rem;
+  align-items:flex-start;
+  flex-wrap:wrap;
+}
+.status-ok{ color:var(--accent); }
+.status-err{ color:var(--danger); }
+.copy-btn{
+  background:#0d2734;
+  border:1px solid rgba(100,255,218,.4);
+  color:var(--accent);
+  padding:.4rem .8rem;
+  border-radius:8px;
+  font-size:.65rem;
+  font-weight:700;
+  letter-spacing:.5px;
+  cursor:pointer;
+  transition:.35s;
+}
+.copy-btn:hover{ background:#134050; }
+.honey-box{ position:absolute; left:-9999px; top:-9999px; visibility:hidden; }
+.small-note{
+  font-size:.6rem;
+  letter-spacing:.5px;
+  opacity:.6;
+  margin-top:.35rem;
+  text-transform:uppercase;
+}
+@media (max-width:640px){
+  .form-actions{ flex-direction:column; align-items:stretch; }
+  .btn-pill, .btn-pill.secondary{ width:100%; justify-content:center; }
+}
+
+/* ===== Fix footer visibility & stick to bottom ===== */
+body {
+  /* إضافة خصائص الفلكس مع الحفاظ على الباقي */
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+  /* ...existing code (font/background/etc.)... */
+}
+main {
+  flex:1; /* يدفع الفوتر لأسفل */
+}
+
+/* تحسين تباين الفوتر (اختياري) */
+footer {
+  /* ...existing code... */
+  background:
+    radial-gradient(circle at 50% 0, rgba(100,255,218,.05), transparent 60%),
+    linear-gradient(180deg, rgba(8,30,45,.85), #040c15 80%);
+}
+
+/* سطر مساعد (اختياري) يمكنك حذفه بعد الاختبار */
+footer::before {
+  content:""; position:absolute; inset:0;
+  pointer-events:none;
+  background:linear-gradient(90deg,rgba(100,255,218,.12),transparent 60%);
+  opacity:.35;
+}
+footer { position:relative; }
+
+/* ========== زر العودة للأعلى ========== */
+#backToTop{
+  position:fixed;
+  inset:auto 1.1rem 1.1rem auto;
+  width:48px;height:48px;
+  display:grid;place-items:center;
+  border:1px solid rgba(100,255,218,.35);
+  background:rgba(10,35,50,.75);
+  -webkit-backdrop-filter:blur(8px) saturate(160%);
+  backdrop-filter:blur(8px) saturate(160%);
+  color:var(--accent);
+  border-radius:14px;
+  cursor:pointer;
+  opacity:0;
+  transform:translateY(12px) scale(.85);
+  pointer-events:none;
+  transition:.5s var(--transition);
+  z-index:120;
+}
+#backToTop.visible{
+  opacity:1;
+  transform:none;
+  pointer-events:auto;
+}
+#backToTop:hover{
+  background:var(--accent);
+  color:#04121d;
+  box-shadow:0 6px 18px -4px rgba(100,255,218,.45);
+}
+
+/* ===== Responsive & Accessibility Enhancements (added) ===== */
+
+/* Fluid root scaling */
+html { font-size:16px; }
+@media (max-width:1300px){ html { font-size:15.5px; } }
+@media (max-width:1100px){ html { font-size:15px; } }
+@media (max-width:900px){  html { font-size:14.6px; } }
+@media (max-width:760px){  html { font-size:14.2px; } }
+@media (max-width:600px){  html { font-size:13.8px; } }
+@media (max-width:480px){  html { font-size:13.4px; } }
+@media (max-width:380px){  html { font-size:13px; } }
+
+/* Constrain overall layout on ultra‑wide */
+@media (min-width:1700px){
+  .wrapper, .hero, .navbar { max-width:1500px; }
+  .hero h1 { font-size:clamp(3rem,3.2vw,4.8rem); }
+}
+
+/* Wrapper horizontal padding refinement */
+.wrapper { padding:0 clamp(.9rem, 3vw, 2rem); }
+@media (max-width:520px){
+  .wrapper { padding:0 1rem; }
+  .contact-cta { padding:2.4rem 1.4rem !important; }
+}
+
+/* HERO refinements */
+.hero {
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,480px),1fr));
+  gap:3.2rem;
+}
+.hero .portrait-wrapper{ max-width:360px; }
+@media (max-width:880px){
+  .hero { padding-top:5.5rem; }
+  .hero .portrait-wrapper{ order:-1; }
+}
+@media (max-width:640px){
+  .hero { padding:4.2rem 0.85rem 3.2rem; gap:2.4rem; }
+  .hero h1 { font-size:clamp(2rem,7vw,3.1rem); }
+  .hero .lead { line-height:1.65; }
+  .hero .portrait-wrapper{ max-width:310px; }
+}
+@media (max-width:420px){
+  .hero { padding-top:4rem; }
+  .hero .portrait-wrapper{ max-width:270px; }
+}
+
+/* Header compaction on narrow screens */
+@media (max-width:600px){
+  .navbar { padding:.65rem .9rem; gap:1rem; }
+  .brand { font-size:1.25rem; }
+}
+
+/* Mobile menu scroll safety */
+#mobileMenu { overflow-y:auto; }
+
+/* Services grid fine tuning */
+.services-grid {
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+}
+@media (max-width:640px){
+  .services-grid { gap:1.1rem; }
+  .service { padding:1.1rem 1rem 1.2rem; min-height:unset; }
+  .service i { font-size:1.6rem; }
+}
+@media (max-width:430px){
+  .services-grid { grid-template-columns:repeat(auto-fit,minmax(175px,1fr)); }
+}
+
+/* Advanced skills responsiveness */
+@media (max-width:820px){
+  .skills-pro { gap:.85rem; }
+  .skill-adv { padding:.75rem .8rem 1rem; }
+  .skill-adv .header { font-size:.85rem; }
+}
+@media (max-width:560px){
+  .skill-adv .badge { top:-28px; font-size:.62rem; padding:.2rem .5rem .25rem; }
+  .skill-adv .track { height:12px; }
+  .skill-adv .dot { width:18px; height:18px; }
+}
+@media (max-width:420px){
+  .skill-adv { padding:.65rem .7rem .85rem; }
+  .skill-adv .header { flex-wrap:wrap; }
+}
+
+/* Projects cards */
+@media (max-width:740px){
+  .projects-grid { gap:1.4rem; }
+  .project .content { padding:1rem .95rem 1.2rem; }
+}
+@media (max-width:480px){
+  .projects-grid { grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); }
+}
+
+/* Contact section & form */
+@media (max-width:880px){
+  .contact-cta { padding:2.8rem 2.1rem !important; }
+}
+@media (max-width:640px){
+  .form-grid { gap:.9rem; }
+  .inline-2 { gap:.9rem; }
+  .field textarea { min-height:120px; }
+}
+@media (max-width:430px){
+  .btn-pill { font-size:.78rem; padding:.75rem 1.15rem; }
+  .btn-pill i { font-size:.9rem; }
+}
+
+/* Footer spacing */
+@media (max-width:600px){
+  footer { padding:1.8rem 1rem; }
+}
+
+/* Reduce visual noise on very small screens */
+@media (max-width:520px){
+  body::before { opacity:.18; animation:none; }
+  body::after { background:
+    radial-gradient(circle at 70% 30%, rgba(20,70,80,.10), transparent 60%),
+    linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.65)); }
+}
+
+/* Back to top button sizing tweaks */
+@media (max-width:560px){
+  #backToTop { width:44px; height:44px; }
+}
+@media (max-width:400px){
+  #backToTop { width:40px; height:40px; font-size:.85rem; }
+}
+
+/* Prefer reduced motion support */
+@media (prefers-reduced-motion:reduce){
+  * { animation-duration:.001ms !important; animation-iteration-count:1 !important; transition:none !important; scroll-behavior:auto !important; }
+  body::before { animation:none; }
+}
+
+/* High contrast mode (optional subtle boost) */
+@media (forced-colors:active){
+  .glass, .service, .skill-adv, .project, .contact-cta { border:1px solid CanvasText; }
+  a, .btn, .btn-pill { forced-color-adjust:auto; }
+}
+
+/* Improve focus visibility */
+:focus-visible {
+  outline:2px solid var(--accent);
+  outline-offset:3px;
+  border-radius:6px;
+}
+
+/* Avoid text overflow on ultra narrow */
+h1,h2,h3,h4 { word-wrap:break-word; }
+
+/* Tighten timeline on narrow screens */
+@media (max-width:640px){
+  .timeline { padding-right:1rem; }
+  .event { margin-bottom:1.2rem; }
+}
+
+/* Grid fine tuning for dual column sections on mid screens */
+@media (max-width:1020px){
+  .grid.md\:grid-cols-2 { gap:2.4rem !important; }
+}
+
+/* Subtle hover downgrade for touch devices */
+@media (hover:none){
+  .btn:hover,
+  .btn-pill:hover,
+  .service:hover,
+  .project:hover { transform:none; }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="navbar">
+    <div class="brand" data-ar="يوسف الشريف" data-en="Yousef Alsherief">
+      <i class="fa-solid fa-screwdriver-wrench text-[var(--accent)]"></i><span>يوسف الشريف</span>
+    </div>
+    <nav aria-label="Main Navigation">
+      <ul id="navLinks">
+        <li><a href="#hero" data-ar="الرئيسية" data-en="Home" class="active">الرئيسية</a></li>
+        <li><a href="#about" data-ar="نبذة" data-en="About">نبذة</a></li>
+        <li><a href="#experience" data-ar="الخبرة" data-en="Experience">الخبرة</a></li>
+        <li><a href="#services" data-ar="الخدمات" data-en="Services">الخدمات</a></li>
+        <li><a href="#skills" data-ar="المهارات" data-en="Skills">المهارات</a></li>
+        <li><a href="#projects" data-ar="الأعمال" data-en="Projects">الأعمال</a></li>
+        <li><a href="#contact" data-ar="تواصل" data-en="Contact">تواصل</a></li>
+      </ul>
+    </nav>
+    <div class="flex items-center gap-3">
+      <div class="lang-switch" role="group" aria-label="Language Switcher">
+        <button id="lang-ar" class="active">AR</button>
+        <button id="lang-en">EN</button>
+      </div>
+      <button class="mobile-nav-toggle" id="menuBtn" aria-label="Open Menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+  <div id="mobileMenu" aria-hidden="true">
+    <a href="#hero" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+    <a href="#about" data-ar="نبذة" data-en="About">نبذة</a>
+    <a href="#experience" data-ar="الخبرة" data-en="Experience">الخبرة</a>
+    <a href="#services" data-ar="الخدمات" data-en="Services">الخدمات</a>
+    <a href="#skills" data-ar="المهارات" data-en="Skills">المهارات</a>
+    <a href="#projects" data-ar="الأعمال" data-en="Projects">الأعمال</a>
+    <a href="#contact" data-ar="تواصل" data-en="Contact">تواصل</a>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section id="hero" class="hero">
+  <div class="content fade">
+    <div class="tagline"
+         data-ar="مهندس صيانة أجهزة الحاسوب والشبكات"
+         data-en="Computer & Network Maintenance Engineer">مهندس صيانة أجهزة الحاسوب والشبكات</div>
+    <h1 data-ar="حلول تقنية موثوقة بأداء احترافي" data-en="Reliable Technical Solutions With Professional Execution">حلول تقنية موثوقة بأداء احترافي</h1>
+    <p class="lead" data-ar="أقدم خدمات صيانة متقدمة للأجهزة، إدارة الشبكات، أمن المعلومات، واستعادة البيانات مع التركيز على الدقة والسرعة وضمان استمرارية العمل." data-en="I deliver advanced hardware maintenance, network administration, cybersecurity, and data recovery with precision, speed, and operational continuity.">
+      أقدم خدمات صيانة متقدمة للأجهزة، إدارة الشبكات، أمن المعلومات، واستعادة البيانات مع التركيز على الدقة والسرعة وضمان استمرارية العمل.
+    </p>
+    <div class="flex flex-wrap gap-4">
+      <a href="#projects" class="btn" data-ar="استعرض الأعمال" data-en="View Projects"><i class="fa-solid fa-display"></i><span>استعرض الأعمال</span></a>
+      <a href="MYCVTE.pdf" download class="btn secondary" data-ar="تحميل السيرة الذاتية" data-en="Download CV"><i class="fa-solid fa-file-arrow-down"></i><span>تحميل السيرة الذاتية</span></a>
+    </div>
+  </div>
+  <div class="portrait-wrapper fade">
+    <div class="portrait-frame">
+      <img src="./images/CVP.PNG" alt="صورة شخصية - يوسف الشريف" class="portrait-img" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="wrapper mt-section fade">
+  <div class="section-head">
+    <h2 data-ar="نبذة احترافية" data-en="Professional Overview">نبذة احترافية</h2>
+  </div>
+  <div class="grid-2">
+    <div class="glass p-7 flex flex-col gap-5">
+      <p data-ar="فني تقنية معلومات معتمد بخبرة تزيد عن 6 سنوات في تشخيص الأعطال المعقدة، صيانة الأجهزة المكتبية والمحمولة، إدارة البيئات متعددة الأنظمة، وتطبيق سياسات الأمان." data-en="Certified IT technician with 6+ years diagnosing complex issues, maintaining desktops & laptops, managing multi-platform environments, and enforcing security policies.">
+        فني تقنية معلومات معتمد بخبرة تزيد عن 6 سنوات في تشخيص الأعطال المعقدة، صيانة الأجهزة المكتبية والمحمولة، إدارة البيئات متعددة الأنظمة، وتطبيق سياسات الأمان.
+      </p>
+      <p data-ar="أمتلك خبرة عملية في تحسين الأداء، بناء أجهزة مخصصة، تصميم الشبكات السلكية واللاسلكية، وإدارة النسخ الاحتياطي واستعادة البيانات الحرجة." data-en="Hands-on experience in performance optimization, custom system builds, wired & wireless network architecture, backup strategy, and critical data recovery.">
+        أمتلك خبرة عملية في تحسين الأداء، بناء أجهزة مخصصة، تصميم الشبكات السلكية واللاسلكية، وإدارة النسخ الاحتياطي واستعادة البيانات الحرجة.
+      </p>
+      <ul class="space-y-2 text-sm leading-relaxed text-[var(--txt-dim)]">
+        <li><i class="fa-solid fa-circle-check text-[var(--accent)] ml-2"></i> <span data-ar="تشخيص دقيق للمشكلات خلال زمن قياسي" data-en="Rapid, precise fault diagnostics">تشخيص دقيق للمشكلات خلال زمن قياسي</span></li>
+        <li><i class="fa-solid fa-circle-check text-[var(--accent)] ml-2"></i> <span data-ar="تنفيذ حلول احترافية قابلة للتطوير" data-en="Scalable professional implementations">تنفيذ حلول احترافية قابلة للتطوير</span></li>
+        <li><i class="fa-solid fa-circle-check text-[var(--accent)] ml-2"></i> <span data-ar="تقليل التوقف وتفادي فقدان البيانات" data-en="Downtime mitigation & data protection">تقليل التوقف وتفادي فقدان البيانات</span></li>
+      </ul>
+    </div>
+    <div class="glass p-7 flex flex-col gap-7">
+      <h3 class="text-xl font-bold" data-ar="ما أقدمه" data-en="What I Deliver">ما أقدمه</h3>
+      <div class="grid grid-cols-2 gap-4 text-sm font-semibold">
+        <div class="flex items-center gap-2"><i class="fa-solid fa-screwdriver-wrench text-[var(--accent)]"></i><span data-ar="صيانة شاملة" data-en="Full Maintenance">صيانة شاملة</span></div>
+        <div class="flex items-center gap-2"><i class="fa-solid fa-microchip text-[var(--accent)]"></i><span data-ar="تحليل الأعطال" data-en="Fault Analysis">تحليل الأعطال</span></div>
+        <div class="flex items-center gap-2"><i class="fa-solid fa-network-wired text-[var(--accent)]"></i><span data-ar="تهيئة الشبكات" data-en="Network Setup">تهيئة الشبكات</span></div>
+        <div class="flex items-center gap-2"><i class="fa-solid fa-shield-halved text-[var(--accent)]"></i><span data-ar="تأمين الأنظمة" data-en="System Hardening">تأمين الأنظمة</span></div>
+        <div class="flex items-center gap-2"><i class="fa-solid fa-database text-[var(--accent)]"></i><span data-ar="استعادة البيانات" data-en="Data Recovery">استعادة البيانات</span></div>
+        <div class="flex items-center gap-2"><i class="fa-solid fa-headset text-[var(--accent)]"></i><span data-ar="دعم فني" data-en="Tech Support">دعم فني</span></div>
+      </div>
+      <div class="mt-auto">
+        <a href="#services" class="btn w-full justify-center" data-ar="استكشف الخدمات" data-en="Explore Services"><i class="fa-solid fa-layer-group"></i><span>استكشف الخدمات</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="wrapper mt-section fade">
+  <div class="section-head">
+    <h2 data-ar="الخبرة والتعليم" data-en="Experience & Education">الخبرة والتعليم</h2>
+  </div>
+  <div class="grid lg:grid-cols-2 gap-8">
+    <div class="glass p-7">
+      <h3 class="text-xl font-bold mb-6" data-ar="الخبرة العملية" data-en="Professional Experience">الخبرة العملية</h3>
+      <div class="timeline">
+        <div class="event">
+          <h4 data-ar="فني تجميع وصيانة" data-en="Assembly & Maintenance Technician">فني تجميع وصيانة</h4>
+            <p class="meta" data-ar="البدر جروب | 2023 - 2024" data-en="Badr Group | 2023 - 2024">البدر جروب | 2023 - 2024</p>
+          <p class="text-sm text-[var(--txt-dim)]" data-ar="بناء أنظمة مخصصة، اختبار مكونات، تحسين الأداء، توثيق تقارير الأعطال." data-en="Custom system builds, component diagnostics, performance tuning, failure reporting."></p>
+        </div>
+        <div class="event">
+          <h4 data-ar="مدير تقنية معلومات (عن بعد)" data-en="Remote IT Manager">مدير تقنية معلومات (عن بعد)</h4>
+          <p class="meta" data-ar="مطعم ذا جلوبال فيو | 2022 - 2023" data-en="The Global View | 2022 - 2023">مطعم ذا جلوبال فيو | 2022 - 2023</p>
+          <p class="text-sm text-[var(--txt-dim)]" data-ar="إدارة الشبكات الداخلية، مراقبة الأنظمة، إدارة النسخ الاحتياطية، تأمين البنية." data-en="Managed internal networks, monitored systems, backups, infrastructure hardening."></p>
+        </div>
+        <div class="event">
+          <h4 data-ar="فني مستقل" data-en="Freelance IT Technician">فني مستقل</h4>
+          <p class="meta" data-ar="منصات متنوعة | 2018 - الآن" data-en="Multiple Platforms | 2018 - Present">منصات متنوعة | 2018 - الآن</p>
+          <p class="text-sm text-[var(--txt-dim)]" data-ar="حلول صيانة، دعم عن بعد، استشارات تحسين الأداء، استعادة بيانات حساسة." data-en="Maintenance, remote support, performance optimization, critical data recovery."></p>
+        </div>
+      </div>
+    </div>
+    <div class="glass p-7">
+      <h3 class="text-xl font-bold mb-6" data-ar="التعليم واللغات" data-en="Education & Languages">التعليم واللغات</h3>
+      <div class="space-y-6">
+        <div>
+          <h4 class="font-semibold" data-ar="بكالوريوس هندسة التكنولوجيا (قيد الدراسة)" data-en="B.Tech in Technology (In Progress)">بكالوريوس هندسة التكنولوجيا (قيد الدراسة)</h4>
+          <p class="text-[var(--txt-dim)] text-sm" data-ar="جامعة السويدي للتكنولوجيا" data-en="El Sewedy University of Technology">جامعة السويدي للتكنولوجيا</p>
+        </div>
+        <div>
+          <h4 class="font-semibold" data-ar="دبلوم تخصص حاسوب" data-en="Computer Diploma">دبلوم تخصص حاسوب</h4>
+          <p class="text-[var(--txt-dim)] text-sm" data-ar="مدرسة سمارت للحاسبات (2021 - 2023)" data-en="Smart Computer School (2021 - 2023)">مدرسة سمارت للحاسبات (2021 - 2023)</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3" data-ar="اللغات" data-en="Languages">اللغات</h4>
+          <div class="grid grid-cols-3 gap-3 text-center">
+            <div class="p-3 bg-[#12283f] rounded-lg">
+              <p class="font-bold" data-ar="العربية" data-en="Arabic">العربية</p>
+              <p class="text-[var(--accent)] text-xs" data-ar="اللغة الأم" data-en="Native">اللغة الأم</p>
+            </div>
+            <div class="p-3 bg-[#12283f] rounded-lg">
+              <p class="font-bold" data-ar="الإنجليزية" data-en="English">الإنجليزية</p>
+              <p class="text-[var(--accent)] text-xs" data-ar="متقدم" data-en="Advanced">متقدم</p>
+            </div>
+            <div class="p-3 bg-[#12283f] rounded-lg">
+              <p class="font-bold" data-ar="الروسية" data-en="Russian">الروسية</p>
+              <p class="text-[var(--accent)] text-xs" data-ar="متقدم" data-en="Advanced">متقدم</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3" data-ar="اعتمادات تقنية مختارة" data-en="Selected Tech Stack">اعتمادات تقنية مختارة</h4>
+          <div class="flex flex-wrap gap-.5 gap-2 text-xs font-semibold">
+            <span class="px-3 py-1 rounded-full bg-[#16344c] border border-[var(--accent)]/40">Cisco</span>
+            <span class="px-3 py-1 rounded-full bg-[#16344c] border border-[var(--accent)]/40">CompTIA</span>
+            <span class="px-3 py-1 rounded-full bg-[#16344c] border border-[var(--accent)]/40">Microsoft</span>
+            <span class="px-3 py-1 rounded-full bg-[#16344c] border border-[var(--accent)]/40">Linux</span>
+            <span class="px-3 py-1 rounded-full bg-[#16344c] border border-[var(--accent)]/40">Virtualization</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="wrapper mt-section fade">
+  <div class="section-head">
+    <h2 data-ar="الخدمات المتخصصة" data-en="Specialized Services">الخدمات المتخصصة</h2>
+  </div>
+  <div class="services-grid">
+    <div class="service">
+      <i class="fa-solid fa-screwdriver-wrench"></i>
+      <h4 class="font-semibold" data-ar="صيانة متكاملة" data-en="Comprehensive Maintenance">صيانة متكاملة</h4>
+      <p class="text-xs text-[var(--txt-dim)]" data-ar="تشخيص أعطال دقيقة للأجهزة المكتبية والمحمولة وتحسين الأداء." data-en="Accurate diagnostics for desktop & laptop systems and performance tuning."></p>
+    </div>
+    <div class="service">
+      <i class="fa-solid fa-microchip"></i>
+      <h4 class="font-semibold" data-ar="تحليل الأعطال" data-en="Hardware Diagnostics">تحليل الأعطال</h4>
+      <p class="text-xs text-[var(--txt-dim)]" data-ar="اختبارات مكونات، مراقبة حرارية، وحلول استبدال محسّنة." data-en="Component stress testing, thermal analysis, and optimized replacements."></p>
+    </div>
+    <div class="service">
+      <i class="fa-solid fa-network-wired"></i>
+      <h4 class="font-semibold" data-ar="بناء الشبكات" data-en="Network Design">بناء الشبكات</h4>
+      <p class="text-xs text-[var(--txt-dim)]" data-ar="تصميم وتركيب شبكات LAN/WLAN آمنة وفعّالة." data-en="LAN/WLAN secure deployment & topology optimization."></p>
+    </div>
+    <div class="service">
+      <i class="fa-solid fa-shield-halved"></i>
+      <h4 class="font-semibold" data-ar="أمن الأنظمة" data-en="System Security">أمن الأنظمة</h4>
+      <p class="text-xs text-[var(--txt-dim)]" data-ar="تقوية الأنظمة، سياسات وصول، وحماية مستوى الشبكة." data-en="System hardening, access policies, and network-level defense."></p>
+    </div>
+    <div class="service">
+      <i class="fa-solid fa-database"></i>
+      <h4 class="font-semibold" data-ar="استعادة البيانات" data-en="Data Recovery">استعادة البيانات</h4>
+      <p class="text-xs text-[var(--txt-dim)]" data-ar="استعادة آمنة من أعطال الأقراص وتقليل الفقد." data-en="Secure recovery from disk failures with minimized loss."></p>
+    </div>
+    <div class="service">
+      <i class="fa-solid fa-headset"></i>
+      <h4 class="font-semibold" data-ar="دعم فني" data-en="Technical Support">دعم فني</h4>
+      <p class="text-xs text-[var(--txt-dim)]" data-ar="مراقبة مستمرة وحلول فورية للأعطال الحرجة." data-en="Continuous monitoring & critical incident resolution."></p>
+    </div>
+    <div class="service">
+      <i class="fa-solid fa-gears"></i>
+      <h4 class="font-semibold" data-ar="إدارة الأنظمة" data-en="Systems Administration">إدارة الأنظمة</h4>
+      <p class="text-xs text-[var(--txt-dim)]"
+         data-ar="إدارة خدمات الخوادم، الحسابات، الصلاحيات، والمراقبة الاستباقية."
+         data-en="Server services, accounts, permission tuning & proactive monitoring."></p>
+    </div>
+    <div class="service">
+      <i class="fa-solid fa-cloud-arrow-up"></i>
+      <h4 class="font-semibold" data-ar="النسخ الاحتياطي والاستمرارية" data-en="Backup & Continuity">النسخ الاحتياطي والاستمرارية</h4>
+      <p class="text-xs text-[var(--txt-dim)]"
+         data-ar="تصميم سياسات نسخ احتياطي متعددة الطبقات وضمان استمرارية العمل."
+         data-en="Layered backup strategy design and business continuity assurance."></p>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="wrapper mt-section fade">
+  <div class="section-head">
+    <h2 data-ar="المهارات التقنية" data-en="Technical Skills">المهارات التقنية</h2>
+  </div>
+  <div class="grid md:grid-cols-2 gap-10">
+    
+    <!-- العمود الأيسر: مجالات أساسية -->
+    <div class="glass p-7 flex flex-col gap-6">
+      <h3 class="font-bold text-lg" data-ar="مجالات أساسية" data-en="Core Domains">مجالات أساسية</h3>
+      <div class="grid grid-cols-2 gap-4 text-sm font-semibold">
+        <div class="flex gap-2 items-center"><i class="fa-solid fa-desktop text-[var(--accent)]"></i><span data-ar="الهاردوير" data-en="Hardware">الهاردوير</span></div>
+        <div class="flex gap-2 items-center"><i class="fa-solid fa-server text-[var(--accent)]"></i><span data-ar="الخوادم" data-en="Servers">الخوادم</span></div>
+        <div class="flex gap-2 items-center"><i class="fa-solid fa-bolt text-[var(--accent)]"></i><span data-ar="تحسين الأداء" data-en="Performance Tuning">تحسين الأداء</span></div>
+        <div class="flex gap-2 items-center"><i class="fa-solid fa-network-wired text-[var(--accent)]"></i><span data-ar="الشبكات" data-en="Networking">الشبكات</span></div>
+        <div class="flex gap-2 items-center"><i class="fa-solid fa-shield text-[var(--accent)]"></i><span data-ar="الأمن السيبراني" data-en="Cybersecurity">الأمن السيبراني</span></div>
+        <div class="flex gap-2 items-center"><i class="fa-solid fa-database text-[var(--accent)]"></i><span data-ar="استعادة البيانات" data-en="Data Recovery">استعادة البيانات</span></div>
+      </div>
+      <p class="text-sm text-[var(--txt-dim)]" data-ar="تركيز على الاعتمادية وتقليل التوقف باستخدام أفضل الممارسات وأدوات احترافية." data-en="Focus on reliability and downtime reduction using best practices and professional tooling.">
+        تركيز على الاعتمادية وتقليل التوقف باستخدام أفضل الممارسات وأدوات احترافية.
+      </p>
+    </div>
+
+    <!-- عمود الإتقان الجديد -->
+    <div class="glass p-7 flex flex-col gap-5">
+      <h3 class="font-bold text-lg" data-ar="مستوى الإتقان" data-en="Proficiency Levels">مستوى الإتقان</h3>
+      <div class="skills-pro">
+        <div class="skill-adv" data-value="92" data-desc-ar="تشخيص أعطال متقدم، إعادة تركيب، تحسين تبريد وأداء." data-desc-en="Advanced diagnostics, reassembly, thermal & performance optimization.">
+          <div class="header">
+            <span class="title" data-ar="صيانة الأجهزة (متقدم)" data-en="Hardware Maintenance (Advanced)">صيانة الأجهزة (متقدم)</span>
+          </div>
+          <div class="track">
+            <div class="fill"></div>
+            <div class="dot"></div>
+            <div class="badge">0%</div>
+          </div>
+          <div class="tooltip" data-ar="تشمل: تبديل مكونات، إدارة حرارة، فحص استقرار، توثيق الأعطال." data-en="Includes: component swap, thermal management, stability tests, failure logs."></div>
+        </div>
+
+        <div class="skill-adv" data-value="90" data-desc-ar="تهيئة شبكات LAN/WLAN، عزل، تتبع، تحسين زمن الاستجابة." data-desc-en="LAN/WLAN provisioning, segmentation, monitoring, latency optimization.">
+          <div class="header">
+            <span class="title" data-ar="إدارة الشبكات (متقدم)" data-en="Network Administration (Advanced)">إدارة الشبكات (متقدم)</span>
+          </div>
+          <div class="track">
+            <div class="fill"></div>
+            <div class="dot"></div>
+            <div class="badge">0%</div>
+          </div>
+          <div class="tooltip" data-ar="إعداد VLAN، QoS، جدران حماية، مراقبة الأداء." data-en="VLAN, QoS, firewalls, throughput monitoring."></div>
+        </div>
+
+        <div class="skill-adv" data-value="86" data-desc-ar="تقوية الأنظمة، إدارة صلاحيات، مراقبة تهديدات، تعامل مع الحوادث." data-desc-en="Hardening, access control, threat monitoring, incident handling.">
+          <div class="header">
+            <span class="title" data-ar="الأمن السيبراني" data-en="Cybersecurity">الأمن السيبراني</span>
+          </div>
+          <div class="track">
+            <div class="fill"></div>
+            <div class="dot"></div>
+            <div class="badge">0%</div>
+          </div>
+          <div class="tooltip" data-ar="ممارسات: تحديثات، مراقبة سجلات، كشف نشاط غير اعتيادي." data-en="Practices: patching, log analysis, anomaly detection."></div>
+        </div>
+
+        <div class="skill-adv" data-value="88" data-desc-ar="استرجاع من أقراص متضررة منطقياً مع تقليل الفقد." data-desc-en="Logical failure recovery minimizing data loss.">
+          <div class="header">
+            <span class="title" data-ar="استعادة البيانات" data-en="Data Recovery">استعادة البيانات</span>
+          </div>
+          <div class="track">
+            <div class="fill"></div>
+            <div class="dot"></div>
+            <div class="badge">0%</div>
+          </div>
+          <div class="tooltip" data-ar="صور قطاعية، تحليل أخطاء، استخراج انتقائي." data-en="Imaging, error map analysis, selective extraction."></div>
+        </div>
+
+        <div class="skill-adv" data-value="84" data-desc-ar="نشر خدمات، افتراضية، مراقبة موارد، إعداد نسخ احتياطي." data-desc-en="Service deployment, virtualization, resource monitoring, backup strategy.">
+          <div class="header">
+            <span class="title" data-ar="الخوادم والافتراضية" data-en="Servers & Virtualization">الخوادم والافتراضية</span>
+          </div>
+          <div class="track">
+            <div class="fill"></div>
+            <div class="dot"></div>
+            <div class="badge">0%</div>
+          </div>
+          <div class="tooltip" data-ar="استخدام: Hyper-V, ESXi, إعداد دور الخادم، مراقبة." data-en="Using Hyper-V / ESXi, role setup, monitoring."></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="wrapper mt-section fade">
+  <div class="section-head">
+    <h2 data-ar="أعمال مختارة" data-en="Selected Projects">أعمال مختارة</h2>
+  </div>
+  <div class="projects-grid">
+    <article class="project">
+      <figure>
+        <img src="https://cdn.shopify.com/s/files/1/0522/3320/7988/files/CUSTOM_PCS_c3fe1481-1182-436c-92bc-9854b8b76f7b.webp?v=1753446448" alt="Gaming PC Build">
+      </figure>
+      <div class="content">
+        <h4 class="font-semibold text-[var(--accent)]" data-ar="بناء جهاز ألعاب عالي الأداء" data-en="High-Performance Gaming Build">بناء جهاز ألعاب عالي الأداء</h4>
+        <p class="text-sm text-[var(--txt-dim)]" data-ar="تجميع وتخصيص نظام مع إدارة حرارية مثالية وكابلات منظمة." data-en="Custom rig with optimal thermal flow and cable discipline."></p>
+        <div class="badges">
+          <span data-ar="اختبار الأداء" data-en="Benchmarking">اختبار الأداء</span><span data-ar="إدارة الكابلات" data-en="Cable Management">إدارة الكابلات</span><span>Airflow</span>
+        </div>
+      </div>
+    </article>
+    <article class="project">
+      <figure>
+        <img src="https://www.imagit.com/storage/2017/08/bigstock-Man-connecting-network-cables-32461088.jpg" alt="Office Network Setup">
+      </figure>
+      <div class="content">
+        <h4 class="font-semibold text-[var(--accent)]" data-ar="تهيئة شبكة مكتب" data-en="Office Network Deployment">تهيئة شبكة مكتب</h4>
+        <p class="text-sm text-[var(--txt-dim)]" data-ar="تصميم طوبولوجيا، إعداد أجهزة شبكية، جدران حماية طبقية." data-en="Topology design, device provisioning, layered firewalls."></p>
+        <div class="badges">
+          <span>Cisco</span><span data-ar="أمن الشبكة" data-en="Net Security">أمن الشبكة</span><span>WLAN</span>
+        </div>
+      </div>
+    </article>
+    <article class="project">
+      <figure>
+        <img src="https://zd-brightspot.s3.us-east-1.amazonaws.com/wp-content/uploads/2023/06/05121556/Data-Recovery-Process.jpg" alt="Data Recovery Case">
+      </figure>
+      <div class="content">
+        <h4 class="font-semibold text-[var(--accent)]" data-ar="استعادة بيانات حساسة" data-en="Critical Data Recovery">استعادة بيانات حساسة</h4>
+        <p class="text-sm text-[var(--txt-dim)]" data-ar="نجاح استعادة أكثر من 95٪ من ملفات عميل من قرص شبه تالف." data-en="Recovered 95%+ of client data from degraded disk layers."></p>
+        <div class="badges">
+          <span data-ar="تحليل قطاعات" data-en="Sector Analysis">تحليل قطاعات</span><span data-ar="أدوات احترافية" data-en="Professional Tools">أدوات احترافية</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="wrapper mt-section fade">
+  <div class="section-head">
+    <h2 data-ar="تواصل معي" data-en="Get In Touch">تواصل معي</h2>
+  </div>
+  <div class="contact-cta glass p-10">
+    <h3 class="text-2xl font-bold mb-4" data-ar="هل تحتاج إلى دعم تقني؟" data-en="Need Technical Support?">هل تحتاج إلى دعم تقني؟</h3>
+    <p class="text-[var(--txt-dim)] leading-relaxed mb-7" data-ar="مستعد لتقديم حلول فعّالة للأعطال، الشبكات، الأداء، والأمان. راسلني مباشرة لبدء التعاون." data-en="Ready to deliver efficient solutions for failures, networking, performance, and security. Reach out to start collaborating."></p>
+
+    <!-- أزرار تواصل سريعة (تبقى) -->
+    <div class="flex flex-wrap justify-center gap-4 mb-8">
+      <a href="https://wa.me/201097585951" target="_blank" rel="noopener" class="btn secondary"><i class="fa-brands fa-whatsapp"></i><span data-ar="تواصل معي" data-en="Get In Touch">تواصل معي</span></a>
+      <a href="mailto:yousefmahmoudsaber@gmail.com" class="btn"><i class="fa-solid fa-envelope"></i><span data-ar="بريد إلكتروني مباشر" data-en="Direct Email">بريد إلكتروني مباشر</span></a>
+    </div>
+
+    <!-- نموذج الاتصال -->
+    <div class="contact-form-wrapper">
+      <!-- =================== تحديث وسم الفورم =================== -->
+      <!-- استبدل "YOUR_UNIQUE_ID" بالمعرّف الخاص بك من Formspree -->
+      <form id="contactForm" action="https://formspree.io/f/manpwgdy" method="POST">
+        <div class="honey-box">
+          <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+        </div>
+        <div class="form-grid">
+          <div class="field">
+            <label for="cf-name" data-ar="الاسم الكامل" data-en="Full Name">الاسم الكامل <span class="required-badge" data-ar="مطلوب" data-en="Required">مطلوب</span></label>
+            <input id="cf-name" name="name" type="text" required data-ph-ar="اكتب اسمك" data-ph-en="Enter your name">
+          </div>
+          <div class="field">
+            <label for="cf-email" data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني <span class="required-badge" data-ar="مطلوب" data-en="Required">مطلوب</span></label>
+            <!-- Formspree يستخدم هذا الحقل للرد على المستخدم -->
+            <input id="cf-email" name="_replyto" type="email" required data-ph-ar="example@mail.com" data-ph-en="example@mail.com" inputmode="email">
+          </div>
+          <div class="field">
+            <label for="cf-phone" data-ar="الهاتف" data-en="Phone">الهاتف</label>
+            <input id="cf-phone" name="phone" type="tel" data-ph-ar="اختياري" data-ph-en="Optional" inputmode="tel">
+          </div>
+          <div class="field">
+            <label for="cf-service" data-ar="نوع الخدمة" data-en="Service Type">نوع الخدمة</label>
+            <select id="cf-service" name="service">
+              <option value="" data-ar="اختر (اختياري)" data-en="Choose (Optional)">اختر (اختياري)</option>
+              <option value="hardware" data-ar="صيانة أجهزة" data-en="Hardware Maintenance">صيانة أجهزة</option>
+              <option value="network" data-ar="شبكات" data-en="Networking">شبكات</option>
+              <option value="security" data-ar="أمن سيبراني" data-en="Cybersecurity">أمن سيبراني</option>
+              <option value="recovery" data-ar="استعادة بيانات" data-en="Data Recovery">استعادة بيانات</option>
+              <option value="consult" data-ar="استشارة" data-en="Consultation">استشارة</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="inline-2">
+          <div class="field">
+            <label for="cf-subject" data-ar="الموضوع" data-en="Subject">الموضوع</label>
+            <!-- Formspree يستخدم هذا الحقل كعنوان للبريد الذي يصلك -->
+            <input id="cf-subject" name="_subject" type="text" maxlength="140" data-ph-ar="نبذة مختصرة" data-ph-en="Short summary">
+            <span class="small-note" data-ar="اختياري" data-en="Optional">اختياري</span>
+          </div>
+          <div class="field">
+            <label for="cf-priority" data-ar="الأولوية" data-en="Priority">الأولوية</label>
+            <select id="cf-priority" name="priority">
+              <option value="normal" data-ar="عادية" data-en="Normal">عادية</option>
+              <option value="high" data-ar="مرتفعة" data-en="High">مرتفعة</option>
+              <option value="urgent" data-ar="عاجلة" data-en="Urgent">عاجلة</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="cf-message" data-ar="الرسالة" data-en="Message">الرسالة <span class="required-badge" data-ar="مطلوب" data-en="Required">مطلوب</span></label>
+            <textarea id="cf-message" name="message" required data-ph-ar="اشرح مشكلتك أو احتياجك..." data-ph-en="Describe your issue or request..."></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-pill"><i class="fa-solid fa-paper-plane"></i><span data-ar="إرسال" data-en="Send">إرسال</span></button>
+          <button type="reset" class="btn-pill secondary"><i class="fa-solid fa-rotate-left"></i><span data-ar="إعادة ضبط" data-en="Reset">إعادة ضبط</span></button>
+        </div>
+
+        <div id="formStatus" aria-live="polite"></div>
+      </form>
+    </div>
+
+    <div class="mt-10">
+
+      <p class="text-xs tracking-wider uppercase text-[var(--accent)] mb-3" data-ar="متواجد على" data-en="Available On">متواجد على</p>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/kingman-jou" target="_blank" rel="noopener" title="LinkedIn" class="text-gray-400 hover:text-white transition-colors duration-300 transform hover:-translate-y-1">
+            <i class="fab fa-linkedin-in text-3xl"></i>
+        </a>
+        <a href="https://github.com/KINGMAN8888" target="_blank" rel="noopener" title="GitHub" class="text-gray-400 hover:text-white transition-colors duration-300">
+            <i class="fab fa-github text-3xl"></i>
+        </a>
+        <a href="https://www.facebook.com/kingsmanjou?mibextid=ZbWKwL" target="_blank" rel="noopener" title="Facebook" class="text-gray-400 hover:text-blue-500 transition-colors duration-300">
+            <i class="fab fa-facebook text-3xl"></i>
+        </a>
+        <a href="https://www.instagram.com/kingman_jou?igsh=MWI1aTE4ZGlxNnp5cw==" target="_blank" rel="noopener" title="Instagram" class="text-gray-400 hover:text-pink-500 transition-colors duration-300">
+            <i class="fab fa-instagram text-3xl"></i>
+        </a>
+        <a href="https://wa.me/201097585951" target="_blank" rel="noopener" title="WhatsApp" class="text-gray-400 hover:text-green-500 transition-colors duration-300">
+            <i class="fab fa-whatsapp text-3xl"></i>
+        </a>
+        <a href="https://t.me/KINGMAN_JOU" target="_blank" rel="noopener" title="Telegram" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+            <i class="fab fa-telegram-plane text-3xl"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p data-ar="© 2025 جميع الحقوق محفوظة - يوسف الشريف" data-en="© 2025 All Rights Reserved - Yousef Alsherief">© 2025 جميع الحقوق محفوظة - يوسف الشريف</p>
+</footer>
+<button id="backToTop" aria-label="العودة للأعلى" title="Top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script>
+(function(){
+  const prefers = localStorage.getItem('lang') || 'ar';
+  const langButtons = { ar: document.getElementById('lang-ar'), en: document.getElementById('lang-en') };
+  function setLang(l){
+    document.documentElement.lang = l;
+    document.documentElement.dir = l === 'ar' ? 'rtl' : 'ltr';
+    document.querySelectorAll('[data-ar]').forEach(el=>{
+      const txt = el.getAttribute(l==='ar'?'data-ar':'data-en');
+      if(!txt) return;
+      if(el.tagName === 'TITLE'){ document.title = txt; return; }
+      el.innerHTML = txt;
+    });
+    document.querySelectorAll('[data-ph-ar]').forEach(el=>{
+      const ph = el.getAttribute(l==='ar'?'data-ph-ar':'data-ph-en');
+      if(ph) el.placeholder = ph;
+    });
+    // ضبط وسم الوصول للزر
+    const topBtn = document.getElementById('backToTop');
+    if(topBtn) topBtn.setAttribute('aria-label', l==='ar'?'العودة للأعلى':'Back to top');
+    Object.keys(langButtons).forEach(k=>langButtons[k].classList.toggle('active',k===l));
+    localStorage.setItem('lang',l);
+    document.dispatchEvent(new CustomEvent('langChange',{detail:{lang:l}}));
+  }
+  langButtons.ar.addEventListener('click',()=>setLang('ar'));
+  langButtons.en.addEventListener('click',()=>setLang('en'));
+  setLang(prefers);
+
+  // Intersection animations
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        if(e.target.querySelectorAll('.skill').length){
+          e.target.querySelectorAll('.skill').forEach(s=>s.classList.add('visible'));
+        }
+      }
+    });
+  },{ threshold:.15 });
+  document.querySelectorAll('.fade').forEach(sec=>io.observe(sec));
+
+  // Active nav link highlight
+  const sections = [...document.querySelectorAll('main section[id]')];
+  const navLinks = [...document.querySelectorAll('header nav a')];
+  const highlight = ()=>{
+    const pos = window.scrollY + innerHeight * .35;
+    let current = sections[0].id;
+    sections.forEach(s=>{ if(pos >= s.offsetTop) current = s.id; });
+    navLinks.forEach(a=>a.classList.toggle('active', a.getAttribute('href') === '#'+current));
+  };
+  window.addEventListener('scroll',highlight); highlight();
+
+  // Mobile menu
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  let open = false;
+  menuBtn.addEventListener('click',()=>{
+    open = !open;
+    mobileMenu.style.display = open ? 'flex' : 'none';
+    menuBtn.innerHTML = open ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+    mobileMenu.setAttribute('aria-hidden', !open);
+  });
+  mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+    open=false; mobileMenu.style.display='none';
+    menuBtn.innerHTML='<i class="fa-solid fa-bars"></i>';
+  }));
+
+  // ضبط قيم أشرطة المهارات من data-value (استبدال attr() غير المدعوم)
+  document.querySelectorAll('.skill[data-value]').forEach(el=>{
+    const v = el.getAttribute('data-value').trim();
+    if(/^\d+%$/.test(v)) el.style.setProperty('--value', v);
+  });
+
+  // (إضافة) تعبئة النسبة المئوية وتهيئة عرضها
+  document.querySelectorAll('.skill[data-value]').forEach(el=>{
+    const v = el.getAttribute('data-value').trim();
+    if(/^\d+%$/.test(v)){
+      el.style.setProperty('--value', v);
+      const pct = el.querySelector('.percent');
+      if(pct) pct.textContent = v;
+    }
+  });
+
+  // =================== استبدل هذا الجزء بالكامل ===================
+  // Contact form handler (Formspree AJAX)
+  const form = document.getElementById('contactForm');
+  if(form){
+    const statusBox = document.getElementById('formStatus');
+    function t(ar,en){ return document.documentElement.lang==='ar'?ar:en; }
+    function setStatus(msg, ok=true){
+      statusBox.innerHTML = `<span class="${ok?'status-ok':'status-err'}">${msg}</span>`;
+    }
+
+    form.addEventListener('submit', async e=>{
+      e.preventDefault();
+      statusBox.innerHTML = '';
+      const data = new FormData(form);
+
+      // التحقق من الحقول المطلوبة قبل الإرسال
+      if(!data.get('name') || !data.get('_replyto') || !data.get('message')){
+        setStatus(t('يرجى تعبئة الحقول المطلوبة.','Please fill required fields.'), false);
+        return;
+      }
+      
+      setStatus(t('جارٍ الإرسال...','Sending...'));
+
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          setStatus(t('تم الإرسال بنجاح! شكراً لتواصلك.', 'Sent successfully! Thank you for your message.'), true);
+          form.reset();
+          // إعادة تعيين placeholders بعد reset
+          document.querySelectorAll('[data-ph-ar]').forEach(el=>{
+            const ph = el.getAttribute(document.documentElement.lang==='ar'?'data-ph-ar':'data-ph-en');
+            if(ph) el.placeholder = ph;
+          });
+        } else {
+          const responseData = await response.json();
+          if (Object.hasOwn(responseData, 'errors')) {
+            const errorMsg = responseData["errors"].map(error => error["message"]).join(", ");
+            setStatus(errorMsg, false);
+          } else {
+            setStatus(t('فشل الإرسال. حاول مرة أخرى.', 'Failed to send. Please try again.'), false);
+          }
+        }
+      } catch (error) {
+        setStatus(t('حدث خطأ. يرجى المحاولة لاحقاً.', 'An error occurred. Please try again later.'), false);
+      }
+    });
+  }
+  // =================== نهاية الجزء المستبدل ===================
+
+  // زر العودة للأعلى
+  const backToTop = document.getElementById('backToTop');
+  if(backToTop){
+    window.addEventListener('scroll',()=>{
+      backToTop.classList.toggle('visible', window.scrollY > 600);
+    });
+    backToTop.addEventListener('click',()=>{
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  }
+})();
+</script>
+
+<script>
+/* ...existing code... */
+(function(){
+  /* ...existing code already inside IIFE... */
+
+  // ===== Advanced skills animation =====
+  const advSkills = document.querySelectorAll('.skill-adv[data-value]');
+  let advAnimated = false;
+  function animateAdvSkills(){
+    if(advAnimated) return;
+    advAnimated = true;
+    const dirRTL = document.documentElement.dir === 'rtl';
+    advSkills.forEach(el=>{
+      const target = parseInt(el.getAttribute('data-value'),10);
+      const fill = el.querySelector('.fill');
+      const badge = el.querySelector('.badge');
+      const dot = el.querySelector('.dot');
+      // Width animation
+      requestAnimationFrame(()=>{ fill.style.width = target + '%'; });
+      // Move dot + badge with CSS transition sync
+      const move = (pct)=>{
+        const clamped = Math.min(Math.max(pct,0),100);
+        const offset = clamped + '%';
+        if(dirRTL){
+          dot.style.transform = `translateX(calc(-${offset})) translateY(-50%)`;
+          badge.style.transform = `translate(calc(50% - ${offset}), 0)`;
+        } else {
+          dot.style.transform = `translateX(${offset}) translateY(-50%)`;
+          badge.style.transform = `translate(calc(-50% + ${offset}), 0)`;
+        }
+      };
+      move(0);
+      let start=null;
+      const duration=1400;
+      function step(ts){
+        if(!start) start=ts;
+        const prog = Math.min((ts-start)/duration,1);
+        const val = Math.floor(prog*target);
+        badge.textContent = val + '%';
+        move(val);
+        if(prog<1) requestAnimationFrame(step);
+        else { badge.textContent = target + '%'; el.classList.add('loaded'); move(target); }
+      }
+      requestAnimationFrame(step);
+      // Localized tooltip content (swap according to lang)
+      function updateTooltip(){
+        const tip = el.querySelector('.tooltip');
+        if(!tip) return;
+        const lang = document.documentElement.lang === 'ar' ? 'ar' : 'en';
+        const desc = el.getAttribute(lang === 'ar' ? 'data-desc-ar' : 'data-desc-en');
+        if(desc) tip.textContent = desc;
+      }
+      updateTooltip();
+      // Re-update on language switch
+      document.addEventListener('langChange',updateTooltip);
+    });
+  }
+
+  // Hook into existing observer: when #skills visible
+  const skillsSection = document.getElementById('skills');
+  if(skillsSection){
+    const obs = new IntersectionObserver(es=>{
+      es.forEach(e=>{ if(e.isIntersecting) { animateAdvSkills(); obs.disconnect(); } });
+    },{threshold:.25});
+    obs.observe(skillsSection);
+  }
+
+  // Reposition logic if direction changes (on language switch)
+  function refreshDirection(){
+    const dirRTL = document.documentElement.dir === 'rtl';
+    advSkills.forEach(el=>{
+      const badge = el.querySelector('.badge');
+      const dot = el.querySelector('.dot');
+      if(!badge || !dot) return;
+      // Force recalculation by removing transforms; animation already finished
+      const val = parseInt(el.getAttribute('data-value'),10);
+      if(el.classList.contains('loaded')){
+        if(dirRTL){
+          dot.style.transform = `translateX(calc(-${val}%)) translateY(-50%)`;
+          badge.style.transform = `translate(calc(50% - ${val}%), 0)`;
+        } else {
+          dot.style.transform = `translateX(${val}%) translateY(-50%)`;
+          badge.style.transform = `translate(calc(-50% + ${val}%), 0)`;
+        }
+      }
+    });
+  }
+
+  // Extend existing setLang to dispatch an event
+  const originalSetLang = window.__setLangInternal;
+  // If not previously wrapped, wrap now
+  if(!originalSetLang){
+    const langButtons = { ar: document.getElementById('lang-ar'), en: document.getElementById('lang-en') };
+    const _set = (l)=>{
+      document.documentElement.lang = l;
+      document.documentElement.dir = l==='ar'?'rtl':'ltr';
+      document.querySelectorAll('[data-ar]').forEach(el=>{
+        const txt = el.getAttribute(l==='ar'?'data-ar':'data-en');
+        if(!txt) return;
+        if(el.tagName==='TITLE'){ document.title = txt; return; }
+        el.innerHTML = txt;
+      });
+      Object.keys(langButtons).forEach(k=>langButtons[k].classList.toggle('active',k===l));
+      localStorage.setItem('lang',l);
+      document.dispatchEvent(new CustomEvent('langChange',{detail:{lang:l}}));
+      refreshDirection();
+    };
+    window.__setLangInternal = _set;
+    // Rebind buttons (override previous)
+    document.getElementById('lang-ar').onclick=()=>_set('ar');
+    document.getElementById('lang-en').onclick=()=>_set('en');
+  }
+  // Trigger direction refresh on first load after current code runs
+  refreshDirection();
+
+})();
+</script>
+</body>
+</html>
+
